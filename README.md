@@ -102,10 +102,37 @@ Open a new Terminal window and do the following steps:
         ```
         import List from './components/List'
         ```
-    -   Just below `<h1>` insert `List.jsx` component and pass fruits list as a prop.
+    -   Just below `<h1>` replace `<ul>` element with `List.jsx` component and pass fruits list as a prop.
         ```
         <List fruits={fruits}></List>
         ```
 
+
+### Add Some Style
+
+1. Open `List.jsx` file and update `<ul>` element with the following inline CSS. 
+    ```
+    <ul style={{ listStyle: 'none', padding: 0 }}>
+    ```
+    -   listStyle: 'none' removes default list styling
+2. Open `ListItem.jsx` file and update `<li>` element with the following inline CSS.
+    ```
+        <li style={{
+            backgroundColor: '#123456',
+            padding: '10px',
+            margin: '5px',
+            borderRadius: '5px',
+            cursor: 'pointer',
+          }}
+          key={id}>{fruit}</li>
+    ```
+    -   backgroundColor: '#123456' - sets the background color
+    -   padding: '10px' - sets padding of each emement to 10 pixels
+    -   margin: '5px' - sets margin to 5 pixels
+    -   borderRadius: '5px' - makes corners rounded
+    -   cursor: 'pointer' - changes cursor to pointer when hovered over.
+
+
 If you followed the steps correctly you should see the following when you run your react application:
-[![Result](resources/result1.png)]()  
+
+[![Result](resources/result.png)]()  
